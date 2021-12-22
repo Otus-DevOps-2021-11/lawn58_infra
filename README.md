@@ -17,4 +17,7 @@ someinternalhost=IP && ssh -tt -i appuser -A appuser@IP "ssh -tt $someinternalho
 Данные для подключения к bastion и someinternalhost:  
 bastion_IP = 62.84.126.237  
 someinternalhost_IP = 10.128.0.23  
+
+
+###ДЗ №4 Основные сервисы Yandex Cloud###
   
