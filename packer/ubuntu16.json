@@ -1,0 +1,24 @@
+{
+    "builders": [
+        {
+            "type": "yandex",
+            "image_name": "reddit-base-{{timestamp}}",
+            "image_family": "reddit-base",
+            "ssh_username": "ubuntu",
+	    "use_ipv4_nat": "true",
+            "platform_id": "standard-v1"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "scripts/install_ruby.sh",
+            "execute_command": "sudo {{.Path}}"
+        },
+        {
+            "type": "shell",
+            "script": "scripts/install_mongodb.sh",
+            "execute_command": "sudo {{.Path}}"
+        }
+    ]
+}

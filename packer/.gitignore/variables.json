@@ -1,0 +1,7 @@
+{
+  "variables": {
+    "service_account_key_file": "/root/key.json",
+    "folder_id":"b1gec5sm6gh6jllu2r6j",
+    "source_image_family":"ubuntu-1604-lts"
+  }
+}
