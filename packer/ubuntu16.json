@@ -2,13 +2,13 @@
     "builders": [
         {
             "type": "yandex",
-	    "service_account_key_file": "/home/user/key.json",
-            "folder_id": "sdfkjsgahdfaksjdf",
-            "source_image_family": "ubuntu-1604-lts",
+            "service_account_key_file": "{{ user `service_account_key_file` }}",
+            "folder_id": "{{ user `folder_id` }}",
+            "source_image_family": "{{ user `source_image_family` }}",
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",
-            "ssh_username": "ubuntu",
-	    "use_ipv4_nat": "true",
+            "ssh_username": "{{ user `ssh_username` }}",
+            "use_ipv4_nat": "{{ user `use_ipv4_nat`}}",
             "platform_id": "standard-v1"
         }
     ],
