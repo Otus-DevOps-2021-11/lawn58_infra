@@ -1,0 +1,9 @@
+{
+
+    "service_account_key_file": "key.json",
+    "folder_id":"dflkgjdsfgdsfg",
+    "source_image_family":"ubuntu-1605-lts",
+    "ssh_username":"centos",
+    "use_ipv4_nat":"false"
+  
+}
