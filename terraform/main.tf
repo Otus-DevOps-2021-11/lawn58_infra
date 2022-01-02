@@ -7,7 +7,7 @@ provider "yandex" {
 
 resource "yandex_compute_instance" "app" {
   count = var.count_instance
-  name = "${var.inst_name}-${count.index + 1}"
+  name  = "${var.inst_name}-${count.index + 1}"
   resources {
     cores  = 2
     memory = 2
@@ -29,15 +29,15 @@ resource "yandex_compute_instance" "app" {
   }
 
   connection {
-    type        = "ssh"
-    host  = "${self.network_interface.0.nat_ip_address}"
-   # host        = yandex_compute_instance.app[count.index].network_interface.0.nat_ip_address
+    type = "ssh"
+    host = "${self.network_interface.0.nat_ip_address}"
+    # host        = yandex_compute_instance.app[count.index].network_interface.0.nat_ip_address
     user        = "ubuntu"
     agent       = false
     private_key = file(var.private_key)
-    
+
   }
-   provisioner "file" {
+  provisioner "file" {
     source      = "files/puma.service"
     destination = "/tmp/puma.service"
   }
