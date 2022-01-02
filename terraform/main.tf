@@ -1,5 +1,5 @@
 provider "yandex" {
-  token     = "AQAAAAAHEVvoAATuwbdPijQW9kInhfSKpjpHKcE"
+  token     = "please don't((("
   cloud_id  = var.cloud_id
   folder_id = var.folder_id
   zone      = var.zone
