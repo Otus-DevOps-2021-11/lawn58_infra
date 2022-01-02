@@ -23,5 +23,7 @@ variable private_key {
 variable inst_name {
   description = "reddit-app"
 }
-
+variable "count_instance" {
+  default = 2
+}
 
