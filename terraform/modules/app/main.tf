@@ -30,7 +30,7 @@ resource "yandex_compute_instance" "app" {
   host = yandex_compute_instance.app.network_interface.0.nat_ip_address
   user = "ubuntu"
   agent = false
-  private_key = file("ubuntu")
+  private_key = file("./ubuntu")
   }
 
   provisioner "file" {
