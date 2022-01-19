@@ -38,7 +38,7 @@ resource "yandex_compute_instance" "app" {
   destination = "/tmp/puma.service"
   }
 
-  provisioner "remote-exec" {
-  script = "~/lawn58_infra/terraform/files/deploy.sh"
-  }
+  #provisioner "remote-exec" {
+  #script = "~/lawn58_infra/terraform/files/deploy.sh"
+  #}
 }
