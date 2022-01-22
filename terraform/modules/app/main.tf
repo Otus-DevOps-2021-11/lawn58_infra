@@ -25,20 +25,20 @@ resource "yandex_compute_instance" "app" {
   }
 
 
-  connection {
-  type = "ssh"
-  host = yandex_compute_instance.app.network_interface.0.nat_ip_address
-  user = "ubuntu"
-  agent = false
-  private_key = file("./ubuntu")
-  }
-
-  provisioner "file" {
-  source = "~/lawn58_infra/terraform/files/puma.service"
-  destination = "/tmp/puma.service"
-  }
-
-  provisioner "remote-exec" {
-  script = "~/lawn58_infra/terraform/files/deploy.sh"
-  }
+#  connection {
+#  type = "ssh"
+#  host = yandex_compute_instance.app.network_interface.0.nat_ip_address
+#  user = "ubuntu"
+#  agent = false
+#  private_key = file("~/.ssh/ubuntu")
+#  }
+#
+#  provisioner "file" {
+#  source = "~/lawn58_infra/terraform/files/puma.service"
+#  destination = "/tmp/puma.service"
+#  }
+#
+#  provisioner "remote-exec" {
+#  script = "~/lawn58_infra/terraform/files/deploy.sh"
+#  }
 }
