@@ -54,3 +54,9 @@ testapp_port = 9292
 2. создали inventory файл для указания параметров
 3. создали ansible.cfg файл для упрощения запуска команд
 4. создали простой плейбук
+
+###ДЗ №8 Продолжение знакомства с Ansible: templates, handlers, dynamic inventory, vault, tags###
+
+1. создали несколько плейбуков для провижининга
+2. настроили handlers, notofication, tags и т.д.
+3. изменили работу packer (связали с плейбуками ansible)
