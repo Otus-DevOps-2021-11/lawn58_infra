@@ -1,5 +1,5 @@
 provider "yandex" {
-  token     = "WTF DUDE?!"
+  token     = "123"
   cloud_id  = var.cloud_id
   folder_id = var.folder_id
   zone      = var.zone
